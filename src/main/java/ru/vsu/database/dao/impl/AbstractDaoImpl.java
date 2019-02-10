@@ -85,5 +85,4 @@ public abstract class AbstractDaoImpl <T, ID extends Serializable> implements Ab
         return sessionFactory.getCurrentSession();
     }
 
-
 }

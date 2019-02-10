@@ -1,9 +1,7 @@
 package ru.vsu.database.dao;
 
-public interface AttachmentDao {
+import ru.vsu.database.entity.AttachmentEntity;
 
-}
+public interface AttachmentDao extends AbstractDao<AttachmentEntity, Integer> {
 
-public interface RouteDAO extends AbstractDao<RouteDO, Integer> {
-    List<RouteDO> getRoutesByTrainId(int trainId);
 }
