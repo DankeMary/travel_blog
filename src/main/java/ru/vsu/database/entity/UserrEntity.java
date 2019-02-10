@@ -99,7 +99,7 @@ public class UserrEntity {
     }
 
     @ManyToOne
-    @Column(name = "role_id")
+    @JoinColumn(name = "role_id")
     public UserrRoleEntity getRole() {
         return role;
     }

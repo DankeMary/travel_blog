@@ -22,7 +22,7 @@ public class PostPieceEntity {
     }
 
     @ManyToOne
-    @Column(name = "post_id")
+    @JoinColumn(name = "post_id")
     public PostEntity getPost() {
         return post;
     }
@@ -32,7 +32,7 @@ public class PostPieceEntity {
     }
 
     @ManyToOne
-    @Column(name = "place_id")
+    @JoinColumn(name = "place_id")
     public PlaceEntity getPlace() {
         return place;
     }

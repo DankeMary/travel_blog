@@ -44,7 +44,7 @@ public class CommentaryEntity {
     }
 
     @ManyToOne
-    @Column(name = "user_id")
+    @JoinColumn(name = "user_id")
     public UserrEntity getUserr() {
         return userr;
     }
@@ -54,7 +54,7 @@ public class CommentaryEntity {
     }
 
     @ManyToOne
-    @Column(name = "post_id")
+    @JoinColumn(name = "post_id")
     public PostEntity getPost() {
         return post;
     }

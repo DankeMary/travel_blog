@@ -46,7 +46,7 @@ public class PostEntity {
     }
 
     @ManyToOne
-    @Column(name = "user_id")
+    @JoinColumn(name = "user_id")
     public UserrEntity getUserr() {
         return userr;
     }

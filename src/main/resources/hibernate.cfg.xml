@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/blog_db</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.jdbc.time_zone">Europe/Moscow</property>
+        <property name="hibernate.jdbc.useTimezone">true</property>
+        <property name="hibernate.jdbc.useUnicode">true</property>
+        <property name="hibernate.jdbc.useLegacyDatetimeCode">false</property>
+        <property name="hibernate.jdbc.useJDBCCompliantTimezoneShift">true</property>
+        <property name="format_sql">true</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!--<property name="hibernate.current_session_context_class">thread</property>-->
+        <property name="show_sql">true</property>
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+        <mapping class="ru.vsu.database.entity.AttachmentEntity"/>
+        <mapping class="ru.vsu.database.entity.CityEntity"/>
+        <mapping class="ru.vsu.database.entity.CommentaryEntity"/>
+        <mapping class="ru.vsu.database.entity.CountryEntity"/>
+        <mapping class="ru.vsu.database.entity.FavouritePostEntity"/>
+        <mapping class="ru.vsu.database.entity.LikedPostEntity"/>
+        <mapping class="ru.vsu.database.entity.PlaceEntity"/>
+        <mapping class="ru.vsu.database.entity.PostEntity"/>
+        <mapping class="ru.vsu.database.entity.PostPieceEntity"/>
+        <mapping class="ru.vsu.database.entity.RegionEntity"/>
+        <mapping class="ru.vsu.database.entity.UserrRoleEntity"/>
+        <mapping class="ru.vsu.database.entity.UserrEntity"/>
+    </session-factory>
+</hibernate-configuration>

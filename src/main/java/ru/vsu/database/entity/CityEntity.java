@@ -23,7 +23,7 @@ public class CityEntity {
     }
 
     @ManyToOne
-    @Column(name = "region_id")
+    @JoinColumn(name = "region_id")
     public RegionEntity getRegion() {
         return region;
     }
@@ -32,7 +32,7 @@ public class CityEntity {
         this.region = region;
     }
 
-    
+
     @Column(name = "name")
     public String getNamee() {
         return namee;
@@ -42,7 +42,7 @@ public class CityEntity {
         this.namee = namee;
     }
 
-    
+
     @Column(name = "latitude")
     public String getLatitude() {
         return latitude;
@@ -52,7 +52,7 @@ public class CityEntity {
         this.latitude = latitude;
     }
 
-    
+
     @Column(name = "longitude")
     public String getLongitude() {
         return longitude;

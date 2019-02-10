@@ -21,7 +21,7 @@ public class RegionEntity {
     }
 
     @ManyToOne
-    @Column(name = "country_id")
+    @JoinColumn(name = "country_id")
     public CountryEntity getCountry() {
         return country;
     }
