@@ -7,7 +7,7 @@ import ru.vsu.service.serviceobject.AttachmentSO;
 import java.util.List;
 
 @Mapper//(uses= {LocalDateMapper.class, LocalTimeMapper.class})
-public interface AttachmenEntitytMapper {
+public interface AttachmentEntityMapper {
     AttachmentSO attachmentToSO(AttachmentEntity aEntity);
 
     AttachmentEntity attachmentToEntity(AttachmentSO aSO);

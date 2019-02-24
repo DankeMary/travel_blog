@@ -7,7 +7,7 @@ import ru.vsu.service.serviceobject.PostPieceSO;
 import java.util.List;
 
 @Mapper
-public interface PostPieceEntityManager {
+public interface PostPieceEntityMapper {
     PostPieceSO postPieceToSO(PostPieceEntity pPieceEntity);
 
     PostPieceEntity postPieceToEntity(PostPieceSO pPieceSO);
