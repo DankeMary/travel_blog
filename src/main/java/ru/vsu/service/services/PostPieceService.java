@@ -8,8 +8,8 @@ import ru.vsu.database.entity.PostPieceEntity;
 import ru.vsu.travelapp.bean.PostPieceBean;
 import ru.vsu.utils.beanmapper.PostPieceBeanMapper;
 import ru.vsu.utils.beanmapper.PostPieceBeanMapperImpl;
-import ru.vsu.utils.entitymapper.PostPieceEntityManagerImpl;
 import ru.vsu.utils.entitymapper.PostPieceEntityMapper;
+import ru.vsu.utils.entitymapper.PostPieceEntityMapperImpl;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import java.util.List;
 @Transactional
 public class PostPieceService {
     private PostPieceDao postPieceDao;
-    private PostPieceEntityMapper entityMapper = new PostPieceEntityManagerImpl();
+    private PostPieceEntityMapper entityMapper = new PostPieceEntityMapperImpl();
     private PostPieceBeanMapper beanMapper = new PostPieceBeanMapperImpl();
 
     public PostPieceBean postPieceEntityToBean(PostPieceEntity postPiece) {

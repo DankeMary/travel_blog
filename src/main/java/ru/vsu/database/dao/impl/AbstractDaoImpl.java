@@ -28,6 +28,11 @@ public abstract class AbstractDaoImpl <T, ID extends Serializable> implements Ab
         getEntityManager().persist(t);
     }
 
+    public T createReturnObject(T t) {
+        getEntityManager().persist(t);
+        return t;
+    }
+
     public void delete(T t) {
         getEntityManager().delete(t);
     }

@@ -9,7 +9,7 @@ import ru.vsu.travelapp.bean.AttachmentBean;
 import ru.vsu.utils.beanmapper.AttachmentBeanMapper;
 import ru.vsu.utils.beanmapper.AttachmentBeanMapperImpl;
 import ru.vsu.utils.entitymapper.AttachmentEntityMapper;
-import ru.vsu.utils.entitymapper.AttachmentEntitytMapperImpl;
+import ru.vsu.utils.entitymapper.AttachmentEntityMapperImpl;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import java.util.List;
 @Transactional
 public class AttachmentService {
     private AttachmentDao attachmentDao;
-    private AttachmentEntityMapper entityMapper = new AttachmentEntitytMapperImpl();
+    private AttachmentEntityMapper entityMapper = new AttachmentEntityMapperImpl();
     private AttachmentBeanMapper beanMapper = new AttachmentBeanMapperImpl();
 
     public AttachmentBean attachmentEntityToBean(AttachmentEntity attachment) {

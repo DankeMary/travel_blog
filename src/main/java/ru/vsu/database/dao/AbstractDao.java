@@ -8,6 +8,8 @@ import java.util.List;
 public interface AbstractDao <T, ID extends Serializable> {
     void create(T t);
 
+    T createReturnObject(T t);
+
     void delete(T t);
 
     T find(ID id);
