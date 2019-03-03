@@ -20,6 +20,10 @@ public class CountryService {
     private CountryEntityMapper entityMapper = new CountryEntityMapperImpl();
     private CountryBeanMapper beanMapper = new CountryBeanMapperImpl();
 
+    public List<CountryBean> getAll(){
+        return countryEntityListToBeanList(countryDao.findAll());
+    }
+
     public CountryBean countryEntityToBean(CountryEntity country) {
         return beanMapper.countryToBean(entityMapper.countryToSO(country));
     }

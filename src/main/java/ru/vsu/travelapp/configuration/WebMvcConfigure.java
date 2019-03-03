@@ -23,7 +23,17 @@ public class WebMvcConfigure implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry corsRegistry) {
         corsRegistry.addMapping("/**")
-                .allowedOrigins("*", "http://192.168.1.33:8100",
+                .allowedOrigins("*",
+                        "c@http://192.168.1.40:8100",
+                        "c@http://localhost:8100",
+                        "c@http://192.168.1.33:8100",
+                        "capacitor://app:8100",
+                        "capacitor://localhost:8100",
+                        "capacitor://192.168.1.33:8100",
+                        "ionic://localhost:8100",
+                        "ionic://192.168.1.33:8100",
+                        "ionic://192.168.1.40:8100",
+                        "http://192.168.1.33:8100",
                         "http://localhost:8100",
                         "http://localhost:4200",
                         "http://localhost:8080")

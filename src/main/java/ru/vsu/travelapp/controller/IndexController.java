@@ -6,6 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.vsu.database.dao.CountryDao;
+import ru.vsu.service.services.CountryService;
 import ru.vsu.travelapp.bean.PostBean;
 
 @RestController
@@ -17,6 +18,8 @@ public class IndexController {
     @Autowired
     private CountryDao dao;
 
+    @Autowired
+    private CountryService countryService;
 
     @GetMapping("/")
     public ResponseEntity simpleGet() {
@@ -34,7 +37,7 @@ public class IndexController {
     //@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:8100", "http://localhost:8080"})
     public ResponseEntity getCountries() {
         System.out.println("Hello!!!!");
-        return ResponseEntity.ok(dao.findAll());
+        return ResponseEntity.ok(countryService.getAll());
     }
 
     @PostMapping("/makePost")
