@@ -43,6 +43,7 @@ public class IndexController {
     @PostMapping("/makePost")
     public ResponseEntity makePost(@RequestBody PostBean post) {
         System.out.println("Hello!!!!");
+        System.out.println("Place: " + post.getPostPieces().get(0).getPlace());
         return ResponseEntity.ok("{}");
         /*return ResponseEntity.HeadersBuilder.header("Access-Control-Allow-Origin", "*")
                 .header("Access-Control-Allow-Methods", "POST, GET, PUT, UPDATE, OPTIONS")

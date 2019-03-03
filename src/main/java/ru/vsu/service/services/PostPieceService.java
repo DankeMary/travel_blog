@@ -20,6 +20,10 @@ public class PostPieceService {
     private PostPieceEntityMapper entityMapper = new PostPieceEntityMapperImpl();
     private PostPieceBeanMapper beanMapper = new PostPieceBeanMapperImpl();
 
+    public List<PostPieceBean> findPiecesByPostId (int postId) {
+        return postPieceEntityListToBeanList(postPieceDao.findPiecesByPostId(postId));
+    }
+
     public PostPieceBean postPieceEntityToBean(PostPieceEntity postPiece) {
         return beanMapper.postPieceToBean(entityMapper.postPieceToSO(postPiece));
     }

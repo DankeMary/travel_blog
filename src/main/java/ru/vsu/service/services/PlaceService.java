@@ -20,6 +20,10 @@ public class PlaceService {
     private PlaceEntityMapper entityMapper = new PlaceEntityMapperImpl();
     private PlaceBeanMapper beanMapper = new PlaceBeanMapperImpl();
 
+    public List<PlaceBean> findPossiblePlaces(String place) {
+        return placeEntityListToBeanList(placeDao.findPossiblePlaces(place));
+    }
+
     public PlaceBean placeEntityToBean(PlaceEntity place) {
         return beanMapper.placeToBean(entityMapper.placeToSO(place));
     }

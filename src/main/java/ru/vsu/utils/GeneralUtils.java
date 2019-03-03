@@ -2,9 +2,9 @@ package ru.vsu.utils;
 
 public class GeneralUtils {
     public static final int MAX_PAGE_RESULT = 10;
-
-    public static int parseIntForPage(String str, int min, int max) {
-        int pageInt;
+    public static final String EMPTY_RESPONSE_OK = "{}";
+    public static Integer parseIntForPage(String str, int min, int max) {
+        Integer pageInt;
         try {
             pageInt = Integer.valueOf(str);
 
@@ -13,7 +13,7 @@ public class GeneralUtils {
             else if (pageInt > max)
                 pageInt = max;
         } catch (NumberFormatException e) {
-            pageInt = 1;
+            pageInt = null;
         }
         return pageInt;
     }
