@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.vsu.service.services.PlaceService;
 import ru.vsu.service.services.PostService;
 import ru.vsu.utils.GeneralUtils;
 
@@ -15,8 +14,7 @@ import ru.vsu.utils.GeneralUtils;
 public class PostController {
     @Autowired
     private PostService postService;
-    @Autowired
-    private PlaceService placeService;
+
 
     @GetMapping("/all")
     //@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:8100", "http://localhost:8080"})
@@ -29,9 +27,15 @@ public class PostController {
         }
     }
 
+    /*@GetMapping("/findCityOrCountry")
+    //@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:8100", "http://localhost:8080"})
+    public ResponseEntity findCityOrCountry(@RequestParam String place) {
+        return ResponseEntity.ok(placeService.findPossiblePlaces(place));
+    }
+
     @GetMapping("/findPlace")
     //@CrossOrigin(origins = {"http://localhost:4200", "http://localhost:8100", "http://localhost:8080"})
     public ResponseEntity findInPlaces(@RequestParam String place) {
         return ResponseEntity.ok(placeService.findPossiblePlaces(place));
-    }
+    }*/
 }

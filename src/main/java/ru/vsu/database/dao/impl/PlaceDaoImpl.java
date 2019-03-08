@@ -9,10 +9,11 @@ import java.util.List;
 @Repository
 public class PlaceDaoImpl extends AbstractDaoImpl<PlaceEntity, Integer> implements PlaceDao {
     @Override
-    public List<PlaceEntity> findPossiblePlaces(String place) {
+    public List<PlaceEntity> getPlacesLike(String place) {
         List<PlaceEntity> list = (List<PlaceEntity>) getEntityManager()
-                .createQuery("from PlaceEntity pe where pe.placeName like :placeName")
-                .setParameter("placeName", place)
+                .createQuery("from PlaceEntity pe " +
+                        " where pe.placeName like :placeName")
+                .setParameter("placeName", "%" + place + "%")
                 .list();
         return list;
     }

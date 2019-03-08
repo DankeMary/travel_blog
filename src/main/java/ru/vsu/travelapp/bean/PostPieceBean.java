@@ -10,6 +10,7 @@ public class PostPieceBean {
     private PostBean post;
     private PlaceBean place;
     private String textt;
+    //TODO attachment
 
     /*public String getText() {
         return text;

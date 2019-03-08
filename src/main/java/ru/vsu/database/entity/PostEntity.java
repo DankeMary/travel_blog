@@ -8,6 +8,7 @@ import java.sql.Timestamp;
 public class PostEntity {
     private Integer postId;
     private String title;
+    private String textt;
     private Timestamp createdOn;
     private UserrEntity userr;
     private Byte onCheck;
@@ -35,7 +36,15 @@ public class PostEntity {
         this.title = title;
     }
 
-    
+    @Column(name = "textt")
+    public String getTextt() {
+        return textt;
+    }
+
+    public void setTextt(String textt) {
+        this.textt = textt;
+    }
+
     @Column(name = "created_on")
     public Timestamp getCreatedOn() {
         return createdOn;

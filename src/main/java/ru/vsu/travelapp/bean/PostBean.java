@@ -11,6 +11,7 @@ public class PostBean {
 
     private Integer postId;
     private String title;
+    private String textt;
     private Timestamp createdOn;
     private UserrEntity userr;
     private Byte onCheck;
@@ -24,6 +25,14 @@ public class PostBean {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getTextt() {
+        return textt;
+    }
+
+    public void setTextt(String textt) {
+        this.textt = textt;
     }
 
     public ArrayList<PostPieceBean> getPostPieces() {

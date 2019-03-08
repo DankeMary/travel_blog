@@ -8,6 +8,7 @@ import java.util.Objects;
 public class PostSO {
     private Integer postId;
     private String title;
+    private String textt;
     private Timestamp createdOn;
     private UserrEntity userr;
     private Byte onCheck;
@@ -28,6 +29,14 @@ public class PostSO {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getTextt() {
+        return textt;
+    }
+
+    public void setTextt(String textt) {
+        this.textt = textt;
     }
 
     public Timestamp getCreatedOn() {

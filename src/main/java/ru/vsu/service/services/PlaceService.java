@@ -21,7 +21,7 @@ public class PlaceService {
     private PlaceBeanMapper beanMapper = new PlaceBeanMapperImpl();
 
     public List<PlaceBean> findPossiblePlaces(String place) {
-        return placeEntityListToBeanList(placeDao.findPossiblePlaces(place));
+        return placeEntityListToBeanList(placeDao.getPlacesLike(place));
     }
 
     public PlaceBean placeEntityToBean(PlaceEntity place) {
